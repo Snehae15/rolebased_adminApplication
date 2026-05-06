@@ -7,8 +7,8 @@ final _targetBase = Uri.parse(_targetBaseUrl);
 
 Future<void> main() async {
   final server = await HttpServer.bind(InternetAddress.loopbackIPv4, _port);
-  print('Proxy listening on http://localhost:$_port');
-  print('Forwarding to $_targetBaseUrl');
+  stdout.writeln('Proxy listening on http://localhost:$_port');
+  stdout.writeln('Forwarding to $_targetBaseUrl');
 
   await for (final request in server) {
     await _handle(request);
