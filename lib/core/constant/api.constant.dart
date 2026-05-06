@@ -1,7 +1,7 @@
 class ApiConstants {
   static const String baseUrl = String.fromEnvironment(
     'API_BASE_URL',
-    defaultValue: 'https://critter-liver-bodacious.ngrok-free.dev',
+    defaultValue: 'http://localhost:8787',
   );
 
   // Auth

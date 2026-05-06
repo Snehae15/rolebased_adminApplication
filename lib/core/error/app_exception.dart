@@ -11,22 +11,22 @@ class NetworkException extends AppException {
   const NetworkException([super.message = 'No internet connection. Please check your network.']);
 }
 class ValidationException extends AppException {
-  const ValidationException(String msg) : super(msg);
+  const ValidationException(super.message);
 }
 class UnauthorizedException extends AppException {
-  const UnauthorizedException(String msg) : super(msg);
+  const UnauthorizedException(super.message);
 }
 class ForbiddenException extends AppException {
-  const ForbiddenException(String msg) : super(msg);
+  const ForbiddenException(super.message);
 }
 class NotFoundException extends AppException {
-  const NotFoundException(String msg) : super(msg);
+  const NotFoundException(super.message);
 }
 class ConflictException extends AppException {
-  const ConflictException(String msg) : super(msg);
+  const ConflictException(super.message);
 }
 class ServerException extends AppException {
-  const ServerException(String msg) : super(msg);
+  const ServerException(super.message);
 }
 
 // Helper to map DioException to AppException
