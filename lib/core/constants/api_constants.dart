@@ -1,8 +1,12 @@
+import 'package:flutter/foundation.dart';
+
 class ApiConstants {
-  static const String baseUrl = String.fromEnvironment(
-    'API_BASE_URL',
-    defaultValue: 'http://localhost:8787',
-  );
+  static const String _configuredBaseUrl = String.fromEnvironment('API_BASE_URL');
+  static String get baseUrl => _configuredBaseUrl.isNotEmpty
+      ? _configuredBaseUrl
+      : kIsWeb
+          ? 'http://127.0.0.1:8787'
+          : 'https://critter-liver-bodacious.ngrok-free.dev';
 
   // Auth
   static const String login = '/api/auth/login';
